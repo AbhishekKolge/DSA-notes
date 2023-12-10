@@ -1,0 +1,447 @@
+Big O notation: Asymptotic analysis
+
+O(1) Constant - no loops
+O(log N) Logarithmic - usually searching algorithms have log n if they are sorted (Binary Search)
+O(n) Linear - for loops, while loops through n items
+O(n log(n)) Log Linear - usually sorting operations
+O(n^2) Quadratic - every element in a collection needs to be compared to ever other element. Two nested loops
+O(2^n) Exponential - recursive algorithms that solves a problem of size N
+O(n!) Factorial - you are adding a loop for every element
+
+Iterating through half a collection is still O(n)
+
+1 - Constant - statement, one line of code
+log(n) - Logarithmic - Divide and conquer (binary search)
+n - Linear - Loop
+n*log(n) - Linearithmic - Effective sorting algorithms
+n^2 - Quadratic - Double loop
+n^3 - Cubic - Triple loop
+2^n - Exponential - Complex full search
+
+What Can Cause Time in a Function?
+Operations (+, -, *, /)
+Comparisons (<, >, ===)
+Looping (for, while)
+Outside Function call (function())
+
+Sorting Algorithms
+
+Sorting Algorithms - Space complexity - Time complexity - Time complexity
+Insertion Sort - O(1) - O(n) - O(n^2)
+Selection Sort - O(1) - O(n^2) - O(n^2)
+Bubble Sort - O(1) - O(n) - O(n^2)
+Mergesort - O(n) - O(n log n) - O(n log n)
+Quicksort - O(log n) - O(n log n) - O(n^2)
+Heapsort - O(1) - O(n log n) - O(n log n)
+
+Common Data Structure Operations
+
+Worst Case→	Access	Search	Insertion	Deletion	Space Complexity
+Array	O(1)	O(n)	O(n)	O(n)	O(n)
+Stack	O(n)	O(n)	O(1)	O(1)	O(n)
+Queue	O(n)	O(n)	O(1)	O(1)	O(n)
+Singly-Linked List	O(n)	O(n)	O(1)	O(1)	O(n)
+Doubly-Linked List	O(n)	O(n)	O(1)	O(1)	O(n)
+Hash Table	N/A	O(n)	O(n)	O(n)	O(n)
+
+Rule Book
+
+Rule 1: Always worst Case
+Rule 2: Remove Constants
+Rule 3:
+Different inputs should have different variables: O(a + b).
+A and B arrays nested would be: O(a * b)
++ for steps in order
+* for nested steps
+Rule 4: Drop Non-dominant terms
+
+What Causes Space Complexity?
+Variables
+Data Structures
+Function Call
+Allocations
+
+///////////////////
+0(n) - linear time
+if number of input increased then number of operations increased by same amount as well.
+
+0(1) - constant time
+if number of input increased then number of operations will be same.
+
+O(n!) - factorial time
+
+Rules:
+1. worst case
+always assume worst case scenario.
+2. remove constants
+O(1 + n + 100) => O(n)
+O(2n) => O(n)
+3. different terms for inputs
+steps that happen in same indentation we add O(a + b) => O(n)
+steps that happen in nested indentation we multiply O(a * b) => O(n^2)
+4. drop non dominants
+O(2n + 1000 + n^2 + n) => O(n^2)
+
+data structures: ways to store data
+algorithms: functions or ways to use data structures to write programs
+
+data structures + algorithms = programs
+
+when program executes it has two ways to remember things.
+1. heap: store variable
+2. stack: keep track of function calls
+
+The 3 pillars of good code:
+1. Readable
+2. Time Complexity
+3. Space Complexity
+
+What skills interviewer is looking for:
+Analytic Skills - How can you think through problems and analyze things?
+Coding Skills - Do you code well, by writing clean, simple, organized, readable code?
+Technical knowledge - Do you know the fundamentals of the job you're applying for?
+Communication skills: Does your personality match the companies’ culture?
+
+Step By Step through a problem:
+1. When the interviewer says the question, write down the key points at the top (i.e. sorted
+array). Make sure you have all the details. Show how organized you are.
+2. Make sure you double check: What are the inputs? What are the outputs?
+3. What is the most important value of the problem? Do you have time, and space and memory,
+etc.. What is the main goal?
+4. Don't be annoying and ask too many questions.
+5. Start with the naive/brute force approach. First thing that comes into mind. It shows that
+you’re able to think well and critically (you don't need to write this code, just speak about it).
+6. Tell them why this approach is not the best (i.e. O(n^2) or higher, not readable, etc...)
+7. Walk through your approach, comment things and see where you may be able to break things.
+Any repetition, bottlenecks like O(N^2), or unnecessary work? Did you use all the information
+the interviewer gave you? Bottleneck is the part of the code with the biggest Big O. Focus on
+that. Sometimes this occurs with repeated work as well.
+8. Before you start coding, walk through your code and write down the steps you are going to
+follow.
+9. Modularize your code from the very beginning. Break up your code into beautiful small pieces
+and add just comments if you need to.
+10. Start actually writing your code now. Keep in mind that the more you prepare and understand
+what you need to code, the better the whiteboard will go. So never start a whiteboard
+interview not being sure of how things are going to work out. That is a recipe for disaster.
+Keep in mind: A lot of interviews ask questions that you won’t be able to fully answer on time.
+So think: What can I show in order to show that I can do this and I am better than other
+coders. Break things up in Functions, if you can’t remember a method, just make up a function
+and you will at least have it there. Write something, and start with the easy part.
+11. Think about error checks and how you can break this code. Never make assumptions about the
+input. Assume people are trying to break your code and that Darth Vader is using your
+function. How will you safeguard it? Always check for false inputs that you don’t want. Here is
+a trick: Comment in the code, the checks that you want to do… write the function, then tell the
+interviewer that you would write tests now to make your function fail (but you won't need to
+actually write the tests).
+12. Don’t use bad/confusing names like i and j. Write code that reads well.
+13. Test your code: Check for no params, 0, undefined, null, massive arrays, async code, etc… Ask
+the interviewer if we can make assumption about the code. Can you make the answer return
+an error? Poke holes into your solution. Are you repeating yourself?
+14. Finally talk to the interviewer where you would improve the code. Does it work? Are there
+different approaches? Is it readable? What would you google to improve? How can
+performance be improved? Possibly: Ask the interviewer what was the most interesting
+solution you have seen to this problem
+15. If your interviewer is happy with the solution, the interview usually ends here. It is also
+common that the interviewer asks you extension questions, such as how you would handle the
+problem if the whole input is too large to fit into memory, or if the input arrives as a stream.
+This is a common follow-up question at Google, where they care a lot about scale. The answer
+is usually a divide-and-conquer approach — perform distributed processing of the data and only
+read certain chunks of the input from disk into memory, write the output back to disk and
+combine them later.
+
+Good code checklist:
+[✅]It works
+[✅]Good use of data structures
+[✅]Code Re-use/ Do Not Repeat Yourself
+[✅]Modular - makes code more readable, maintainable and testable
+[✅]Less than O(N^2). We want to avoid nested loops if we can since they are expensive. Two
+separate loops are better than 2 nested loops
+[✅]Low Space Complexity --> Recursion can cause stack overflow, copying of large arrays may
+exceed memory of machine
+
+Heurestics to ace the question:
+[✅]Hash Maps are usually the answer to improve Time Complexity
+[✅]If it's a sorted array, use Binary tree to achieve O(log N). Divide and Conquer - Divide a data set
+into smaller chunks and then repeating a process with a subset of data. Binary search is a great
+example of this
+[✅]Try Sorting your input
+[✅]Hash tables and precomputed information (i.e. sorted) are some of the best ways to optimize your
+code
+[✅]Look at the Time vs Space tradeoff. Sometimes storing extra state in memory can help the time.
+(Runtime)
+[✅]If the interviewer is giving you advice/tips/hints. Follow them
+[✅]Space time tradeoffs: Hashtables usually solve this a lot of the times. You use more space, but you
+can get a time optimization to the process. In programming, you often times can use up a little bit
+more space to get faster time
+
+And always remember: Communicate your thought process as much as possible. Don’t worry about
+finishing it fast. Every part of the interview matters.
+
+how computer stores data?
+cpu: a little worker that does all the calculation. it needs access to ram and storage. it can access the information on ram a lot faster.
+ram: looses memory when computer turns off. it has shelves that are numbered. we call these numbers as addresses. each shelve holds 8 bits or numbers (00000001). each of the number is bit and it is a tiny electrical switch that can be turned on or off. instead of calling it on or off we call it 1 or 0. 8 bits is called as 1 byte. cpu is connected to a memory controller and memory controller does the actually reading and writing the memory. memory controller has connections individually to all the shelves. it means we can access o shelve and immediately access any other shelve without having to climb down or step down. even this memory controller can jump between far apart memory addresses really fast, program stand to access memory near by. computer are actually tuned to get extra speed boost when reading memory addresses that are close to each other. we also have cpu cache (lru cache) where it has tiny memory where it stores the copy of stuff that it really recent.
+storage: data on storage is permanent (persistent). it is slow.
+
+data structure is arrangement of data. we can define the way you interact with data and how it is arranged in ram. some data structure in ram are organized right next to each other, some are apart from each other. they have different pros and cons on access and write. our goal is to minimize the operation that we need to do for the cpu to get and write the information.
+
+1.arrays
+2.stacks
+3.queues
+4.linked lists
+5.trees
+6.tries
+7.graphs
+8.hash tables
+
+//arrays:
+static: fixed in size. you need to specify number of elements array will hold ahead of time
+dynamic: allow us to copy and rebuild an array at new location with doubled the memory.
+
+//hash tables:
+in hashtables key is used as the index of where to find a value in memory.
+it has a hash function which gets to decide where to put data in memory. a hash function that we use for hash tables is going to take a key and generate some random hash and then convert it to index or address space. we usually assume time complexity of the hash function as O1.
+
+hash collisions:
+sometimes two keys can get same address space by hash function. with enough data and limited memory we always gonna have collisions and we can't avoid these collisions in hash tables. it slows down ability to access and insert information.
+0(n/k) => 0(n) where k is size of hash table.
+
+in javascript object only allows strings as keys. if we pass number, function, array or any other data type as a key it will get stringified by javascript.
+we have map and set in es6.
+map: map allows any data type as keys. it maintains insertion order.
+set: similar to map but it only stores keys and not values.
+
+//linked list:
+it contains a set of nodes. These nodes have two elements the value of the data you want to store and a pointer to the next node in line.
+The first node is called the head and the last node is called the tail.
+link lists are null terminated, which signifies that it's the end of the list.
+
+apples
+8974 --> grapes
+         8742 --> pears
+                  372 --> null
+
+pointer: It's a reference to another place in memory or another object or another node.
+
+the downside with a singly linked list is that it cannot be iterated in reverse or traverse from back to front.
+if we ever lose the reference to dot head node of the list, the list can actually be lost in memory forever.
+so singly list is appropriate to use when you have less memory or memory is really expensive and you want to be careful of how much you use.
+your main goal is that you want to do fast insertion and deletion and you don't really have that much searching, especially when you have insertion at the beginning of a list.
+
+//doubly linked list:
+These nodes have three elements the value of the data you want to store, a pointer to the next node in line and a pointer to the previous node.
+
+the good side of it is that it can be iterated or traversed both from the front or from the back.
+another beauty is that if you need to delete a previous node, you don't need to traverse from the head node and find what the previous node is.
+
+//stacks & queues
+they are both what we call linear data structures and linear data structures allow us to traverse. that is, go through data elements sequentially one by one in which only one data element can be directly reached.
+unlike an array in stacks and Qs, there's no random access operation.
+you mainly use stacks and Qs to run commands like push, peak, pop. all of which deal exclusively with the element at the beginning or the end of the data structure.
+
+stacks: (LIFO) last in first out.
+pop: remove last
+push: add a plate
+peek: view top most plate
+
+queues: (FIFO) first in first out
+enqueue: add
+dequeue: remove first
+peek: view first
+
+//trees O(log n)
+binary tree: Each node can only have either zero, one or two nodes, and each child can only have one parent, each node represents a certain state.
+
+perfect binary tree: A perfect binary tree has everything filled in. That means all the leaf nodes are full and there's no node that only has one child. A node either has zero children or two children, and also the bottom layer of the tree is completely filled.
+the number of total nodes on each level doubles as we move down the tree.
+the number of nodes on the last level is equal to the sum of the number of nodes on all the other levels plus one.
+       o
+       /\
+      o  o
+     /\  /\
+    o o  o o
+
+full binary tree: a node has either zero or two children, but never one child.
+       o
+       /\
+       o o
+      /\
+      o o
+        /\
+        o o
+
+
+level 1: 2^1 = 1
+level 2: 2^2 = 4
+level 3: 2^3 = 8
+
+no of nodes = 2^height - 1
+log nodes = height
+
+(
+100 = 10^2
+log 100 = 2
+)
+
+binary search tree: a binary search tree are really really good, as the name suggests at searching. they're great for comparing things.
+this data structure preserves relationships.
+
+rules:
+all child nodes in the tree to the right of the root node must be greater than the current node.
+all child nodes in the tree to the left of the root node must be less than the current node.
+a node can only have up to two children.
+
+self balancing trees: AVL tree or a red black tree that automatically rebalances itself so that we don't have those edge cases where our balanced tree turns into a linear, unbalanced tree.
+
+binary heaps (lookup: O(n)): two children to a node.
+max heap: every child belongs to a parent node that has a greater priority or value.
+min heap: every child belongs to a parent node that has a lower priority or value.
+
+The beauty of binary heaps is that they take up the least amount of space possible because it's always left to right insertion. So there's no concept of an unbalanced binary heap.
+
+priority queues: It is a type of data where each element has a priority and elements with a higher priority are served before elements with lower priorities.
+use binary heaps when you're just interested in finding the max or finding the minimum if it's a min heap.
+
+trie or prefix tree: A trie is a specialized tree used in searching, most often with text. And in most cases, it can outperform binary search trees, hash tables and most other data structures.
+Tries allow you to know if a word or part of a word exists in a body of text.
+It can have multiple children.
+it will most likely have 26 children because there's 26 letters in the alphabet.
+the big o of a trie is O of length. That is the length of the word.
+
+//graphs:
+a graph is simply a set of values that are related in a pairwise fashion.
+Each item is called a node or a vertex.
+Nodes are then connected with edges.
+
+directed
+undirected
+unweighted
+weighted
+cyclic
+acyclic
+
+//algorithm
+Algorithms allow us to use language built in data structures like arrays and objects or primitives such as integers and booleans and even custom data types to perform actions on that data.
+
+//Recursion
+it isn't technically an algorithm. It's more of a concept.
+
+const inception = () => {
+       inception();
+};
+
+1. identify the base case
+2. identify the recursive case
+3. get closer and closer to base case and return when needed.
+usually we have 2 returns, one is desired result and second is recursive function itself because when base case is reached, call stack gets cleared one by one and we need to bubble up desired result.
+
+anything you do with a recursion can be done iteratively (loop).
+
+tail call optimization: in javascript with es6 it allows recursions to be called without increasing the call stack.
+
+when to use recursion rules:
+every time you are using a tree or converting something into a tree.
+divided into a number of sub problems that are smaller instances of the same problem.
+each instance of the sub problem is identical in nature.
+the solutions of each sub problem can be combined to solve the problem at hand.
+divide and conquer using recursion.
+
+//sorting
+
+bubble sort: never use
+selection sort: never use
+insertion sort: input is small or items are mostly sorted
+
+
+merge Sort: stable algorithm. worried about worst case scenarios then use it. if you want to sort in memory on your machine, space complexity is O(n) hence it is expensive. if you have huge files and external process outside of memory then it is good.
+quick sort: unstable algorithm. better than merge sort. one downside is worst case O(n^2) if you don’t pick piviot properly.
+heap sort: on average it is slower than quick sort in most cases. unless you are really really worried about worst case and memory then you might use it. but most of the time we use quick sort or merge sort.
+
+mathematically it is impossible to improve on O(n log n) when it comes to sorting.
+
+radix sort
+counting sort
+it is entirely different way of thinking about sorting (non comparison sort). we take advantage of how the numbers and data stored on computer with 0 and 1, hence it is only work with numbers (integers) in restricted range because of the numbers are stored on computer with 0 and 1.
+
+//searching and traversal
+linear search
+binary search
+
+traversing through tree and graph
+BFS: breadth first search (more memory, shortest path)
+DFS: depth first search (less memory, does path exist, slow)
+
+BFS: it uses additional memory because it is necessary to track the child nodes of all the nodes on a given level.
+
+       10
+       /\
+      4  7
+     /\  /\
+    1 8  3 5
+
+[10, 4, 7, 1, 8, 3, 5]
+
+DFS: The search follows one branch of the tree down as many levels as possible until the target node is found or the end is reached.
+When the search can't go on any further, it continues at the nearest ancestor with an unexplored child.
+it has a lower memory requirement than BFS because it's not necessary to store all the child pointers at each level.
+
+       10
+       /\
+      4  7
+     /\  /\
+    1 8  3 5
+
+[10, 4, 1, 8, 7, 3, 5]
+
+if we have additional information on location of target node
+- if node is likely in the upper level of tree then use BFS.
+- if node is likely in the lower level of tree then use DFS.
+
+//If you know a solution is not far from the root of the tree:
+BFS
+
+//If the tree is very deep and solutions are rare, 
+BFS (DFS will take long time)
+
+//If the tree is very wide:
+DFS (BFS will need too much memory)
+
+//If solutions are frequent but located deep in the tree
+DFS
+
+//determining whether a path exists between two nodes
+DFS
+
+//Finding the shortest path
+BFS
+
+three ways to implement DFS
+inOrder: [1, 4, 6, 9, 15, 20, 170]
+preOrder: [9, 4, 1, 6, 20, 15, 170] (we can recreate a tree with this order)
+postOrder: [1, 6, 4, 15, 170, 20, 9]
+
+       9
+      / \
+     /   \
+    4     20
+   /\      /\
+  /  \    /  \
+ 1    6  15  170
+
+dijkstra and bellman-ford: allow us to find shortest path between two nodes of weighted graph.
+
+with BFS we can get the shortest path but it assumes each jump to another node in a graph to be of same weight. BFS does not allow us to take edge weight in account.
+
+dijkstra: positive edge weight and fast.
+bellman-ford: positive and negative edge weight but slow.
+
+//dynamic programming
+it is just an optimization technique using caching.
+at a high level dynamic programming is a way to solve problems by breaking it down into a collection of small problems, solving each of those problems just once, and storing their solutions in case next time the same sub problem occurs.
+
+memoization: it is a specific form of caching that involves caching the return value of a function based on it's parameters.
+
+steps to see if we can use dynamic programming
+1. can be divided into sub problems
+2. recursive solution
+3. are there repetitive sub problems
+4. memoize sub problems
